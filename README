@@ -1,2 +1,5 @@
-In a file called local_settings.py, you'll need to provide a Yahoo! PlaceFinder application id. 
-See settings.py to see what the name of the setting is. 
+In a file called local_settings.py, you'll need to provide a Yahoo! PlaceFinder
+application id.  See settings.py to see what the name of the setting is. 
+
+The original geocode.py file is from:
+https://github.com/salathegroup/vaccine-sentiment and is pretty much unchanged. 

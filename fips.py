@@ -30,7 +30,7 @@ def fips2centerlatlong(list_fips_codes):
 	geocode_results = []
 
 	for fips_code in list_fips_codes:
-		results = geocode.yahoo_geocode("%s, %s" % (fips_lookup[fips_code], 'US'))
+		results = geocode.core_yahoo_geocode("%s, %s" % (fips_lookup[fips_code], 'US'))
 		first_result = results['ResultSet']['Results'][0]
 		latlong = (first_result['latitude'], first_result['longitude'])
 

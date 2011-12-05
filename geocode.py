@@ -22,7 +22,7 @@ LUCENE_STOP_WORDS = [
 	'this', 'to', 'was', 'will', 'with', 'here',
 ]
 
-def yahoo_geocode(location):
+def core_yahoo_geocode(location):
 	"Take a location, return the geographical location, if found"
 	url_str = urllib.urlencode({
 					'appid':YAHOO_APP_ID,
@@ -35,6 +35,11 @@ def yahoo_geocode(location):
 	json_result = json.loads(f.read())
 
 	return json_result
+
+
+def yahoo_geocode(location):
+	"Take a location, return the geographical location, if found"
+	json_result = core_yahoo_geocode(location)
 
 	geocode_result = Geocode()
 
